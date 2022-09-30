@@ -1,77 +1,90 @@
+import {getMovies,appendMovies} from "./components/getData.js"
+const API_KEY = 'api_key=11193c256ad986f3be31059a8cc4d2d7';
+const BASE_URL = 'https://api.themoviedb.org/3';
+const popularMoviesData_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'+API_KEY;
+const IMG_URL = 'https://image.tmdb.org/t/p/w500';
+const searchURL = BASE_URL + '/search/movie?'+API_KEY;
 
 
-async function searchMovies() {
-    console.log("Check")
 
-    try {
-        let query = document.getElementById("query").value;
-        let res = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=1fa8952c&s=${query}`);
-        let data = await res.json();
-        console.log("➡️   ~ file: search.js ~ line 11 ~ searchMovies ~ data", data);
-        let actual_data = data.Search;
-        appendMovies(actual_data);
+
+
+
+let data= await getMovies(popularMoviesData_URL);
+console.log(data);
+
+let moviesDiv1 = document.getElementById("movies")
+
+let moviesDiv = document.getElementById("movies2")
+
+
+appendMovies(data,moviesDiv1)
+ appendMovies(data,moviesDiv)
+
+
+
+
+
+
+
+
+
+const gap = 16;
+const carousel = document.getElementById("cardContainer1"),
+    content = document.getElementById("movies"),
+    next = document.getElementById("next"),
+    prev = document.getElementById("prev");
+
+next.addEventListener("click", e => {
+    carousel.scrollBy(width + gap, 0);
+    if (carousel.scrollWidth !== 0) {
+        prev.style.display = "flex";
     }
-    catch (err) {
-        console.log("➡️   ~ file: search.js ~ line 13 ~ searchMovies ~ err", err);
+    if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+        next.style.display = "none";
     }
-}
-
-
-
-function appendMovies(data) {
- 
-    if(data===undefined){
-        return false
+});
+prev.addEventListener("click", e => {
+    carousel.scrollBy(-(width + gap), 0);
+    if (carousel.scrollLeft - width - gap <= 0) {
+        prev.style.display = "none";
     }
-    let data_div = document.getElementById("movies") || []
-
-    data_div.innerHTML = null;
-
-
-    data.forEach(function (ele) {
-        if (ele.Poster == "N/A") {
-            ele.Poster = "https://lh3.googleusercontent.com/drive-viewer/AJc5JmTP6TOwlyMHtH7CBF4hUZxctAGWua0kyPm5htG0ZzwbnTfUBwMMCDC4Q-txJZ-dQWAa6k-TZo0=w1920-h1007"
-        }
-        let div = document.createElement('div');
-        div.id="main"
-
-        let p_name = document.createElement('p');
-        p_name.innerHTML = `Name: ${ele.Title}`;
-
-        let p_rating = document.createElement("p");
-        p_rating.innerHTML = `Year: ${ele.Year}`;
-
-
-        let img = document.createElement('img');
-        img.id = "poster";
-        img.src = ele.Poster;
-        img.addEventListener("click",function(){
-            console.log("check")
-
-            let movieDetails = {
-                name:`${ele.Title}`,
-                image:`${ele.Poster}`,
-                year:`${ele.Year}`,
-                type:`${ele.Type}`,
-            }
-            
-            localStorage.setItem("movieDetails",JSON.stringify(movieDetails));
-            window.location.href="detais.html"
-        })
-
-        div.append(img,p_name, p_rating);
-        data_div.append(div)
-    });
-}
-
-let id;
-function debaunce(func,delay){
-
-    if(id){
-        clearTimeout(id);
+    if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+        next.style.display = "flex";
     }
-   id = setTimeout(function() {
-        func()
-    }, delay);
+});
 
-}
+let width = carousel.offsetWidth;
+window.addEventListener("resize", e => (width2 = carousel2.offsetWidth));
+
+
+
+
+const carousel2 = document.getElementById("cardContainer2"),
+    content2 = document.getElementById("movies2"),
+    next2 = document.getElementById("next2"),
+    prev2 = document.getElementById("prev2");
+
+next2.addEventListener("click", e => {
+    carousel2.scrollBy(width2 + gap, 0);
+    if (carousel2.scrollWidth !== 0) {
+        prev2.style.display = "flex";
+    }
+    if (content2.scrollWidth - width2 - gap <= carousel2.scrollLeft + width2) {
+        next2.style.display = "none";
+    }
+});
+prev2.addEventListener("click", e => {
+    carousel2.scrollBy(-(width2 + gap), 0);
+    if (carousel2.scrollLeft - width2 - gap <= 0) {
+        prev2.style.display = "none";
+    }
+    if (!content2.scrollWidth - width2 - gap <= carousel2.scrollLeft + width2) {
+        next2.style.display = "flex";
+    }
+});
+
+let width2 = carousel2.offsetWidth;
+window.addEventListener("resize", e => (width2 = carousel2.offsetWidth));
+
+
