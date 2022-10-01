@@ -6,7 +6,7 @@
 
   body {
   
-    background-color: rgba(45, 42, 42, 0.114);
+    background-color: #2d2d2d;
     overflow-x: hidden;
   }
   
@@ -33,6 +33,12 @@
   
     position: relative;
     margin: 10px;
+  }
+  .mainDivs p{
+ font-size: 2rem;
+ color: rgb(239, 239, 237);
+
+
   }
   
  
@@ -96,8 +102,8 @@
  
   .subDiv>img {
     border-radius: 20px;
-    width: 200px;
-    height: 100px;
+    width: 300px;
+    height: 150px;
     overflow-x: hidden;
     overflow-y: hidden;
    

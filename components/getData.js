@@ -66,7 +66,7 @@ async function appendMovies2(data,data_div) {
         let details = document.createElement('p');
         details.innerText=ele.overview;
         let name = document.createElement('p');
-        name.src=ele.title;
+        name.innerText=ele.title;
 
         div.append(img,name,details);
         data_div.append(div)
