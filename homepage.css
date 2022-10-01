@@ -17,7 +17,7 @@
   
   
   
- #movies, #movies2 {
+ #movies, #movies2,#movies3,#movies4 {
     display: grid;
     grid-gap: 16px;
     grid-auto-flow: column;
@@ -36,21 +36,19 @@
   }
   
  
- #cardContainer1,#cardContainer2 {
+ #cardContainer1,#cardContainer2,#cardContainer3,#cardContainer4 {
     overflow: auto;
     scroll-behavior: smooth;
     scrollbar-width: 0;
   }
   
 
- /* #cardContainer1,#cardContainer2::-webkit-scrollbar {
-    height: 0;
-  } */
-  
  
   #prev,
   #next,#prev2,
-  #next2{
+  #next2,#prev3,
+  #next3,#prev4,
+  #next4{
     display: flex;
     justify-content: center;
     align-content: center;
@@ -63,14 +61,14 @@
     position: absolute;
   }
   
-  #prev,#prev2{
+  #prev,#prev2,#prev3,#prev4{
     top: 50%;
     left: 0;
     transform: translate(50%, -50%);
     display: none;
   }
 
-  #next, #next2{
+  #next, #next2,#next3, #next4{
     top: 50%;
     right: 0;
     transform: translate(-50%, -50%);
