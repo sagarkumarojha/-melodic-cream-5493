@@ -1,104 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./homepage.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./Images/TV App Logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" type="text/html" src="/styles/login-data.css" />
     <title>Apple Tv+</title>
-</head>
+    <script
+      src="https://kit.fontawesome.com/d591cda822.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./homepage.css" />
+    <link rel="stylesheet" href="./footer.css" />
+    <link rel="stylesheet" href="./Image" />
+    <title>Apple Tv+</title>
+  </head>
 
-<body>
-    <div class="mainDivs">
-     
-        <div id="cardContainer1">
-            <div id="movies">
-                
-            </div>
-            <button id="prev">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
-                    <path fill="none" d="M0 0h24v24H0V0z" />
-                    <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
-                </svg>
-            </button>
-            <button id="next">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
-                    <path fill="none" d="M0 0h24v24H0V0z" />
-                    <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
-                </svg>
-            </button>
-        </div>
-    </div>
+  <body>
+    <div id="Modal"></div>
 
+    <header id="navbar-header"></header>
 
-
-    <div class="mainDivs">
-     
-        <div id="cardContainer2">
-            <div id="movies2">
-                
-            </div>
-            <button id="prev2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
-                    <path fill="none" d="M0 0h24v24H0V0z" />
-                    <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
-                </svg>
-            </button>
-            <button id="next2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
-                    <path fill="none" d="M0 0h24v24H0V0z" />
-                    <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
-                </svg>
-            </button>
-        </div>
+    <div class="jumbotron">
+      <img
+        src="./Images/Tedd Lasso.jpg"
+        alt="Tedd Lasso"
+        class="jumbotron-img"
+      />
+      <div class="jumbotron-content">
+        <p class="jumbotron-main_heading">All Apple Originals</p>
+        <p class="jumbotron-sub_heading">
+          Exclusively on Apple TV+. Watch here and on the Apple TV app across
+          your devices.
+        </p>
+        <button class="jumbotron-btn">Start Free Trial</button>
+        <p class="jumbotron-info">7 days free, then $4.99/month</p>
+        <p class="jumbotron-info">
+          Or 3 months free when ou buy an eligible Apple device.&nbsp<a href=" "
+            >Terms apply.</a
+          >
+          Some titles coming later to Apple TV+.
+        </p>
+        <a href="#latestOrg" id="jumbotron-arrow"
+          ><i class="fa-solid fa-angle-down fa-lg"></i
+        ></a>
+      </div>
     </div>
 
     <div class="mainDivs">
-     
-        <div id="cardContainer3">
-            <div id="movies3">
-                
-            </div>
-            <button id="prev3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
-                    <path fill="none" d="M0 0h24v24H0V0z" />
-                    <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
-                </svg>
-            </button>
-            <button id="next3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
-                    <path fill="none" d="M0 0h24v24H0V0z" />
-                    <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
-                </svg>
-            </button>
-        </div>
+      <p>Watch Premieres for Free</p>
+
+      <div id="cardContainer1">
+        <div id="movies"></div>
+        <button id="prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewbox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z"
+            />
+          </svg>
+        </button>
+        <button id="next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewbox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mainDivs">
+      <div id="cardContainer2">
+        <div id="movies2"></div>
+        <button id="prev2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewbox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z"
+            />
+          </svg>
+        </button>
+        <button id="next2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewbox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mainDivs">
+      <div id="cardContainer3">
+        <div id="movies3"></div>
+        <button id="prev3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewbox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z"
+            />
+          </svg>
+        </button>
+        <button id="next3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewbox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
     <div class="mainDivs">
-     
-        <div id="cardContainer4">
-            <div id="movies4">
-                
-            </div>
-            <button id="prev4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
-                    <path fill="none" d="M0 0h24v24H0V0z" />
-                    <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
-                </svg>
-            </button>
-            <button id="next4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
-                    <path fill="none" d="M0 0h24v24H0V0z" />
-                    <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
-                </svg>
-            </button>
-        </div>
+      <div id="cardContainer4">
+        <div id="movies4"></div>
+        <button id="prev4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewbox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z"
+            />
+          </svg>
+        </button>
+        <button id="next4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewbox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
 
-</body>
+    <!-- footer -->
+    <div id="footer1">
+      <img
+        src="https://tv.apple.com/assets/brands/TV_App_Logo-d343000dfd3ca454ca8705a7aa7dcf4f.png"
+      />
+      <h1>Watch Apple TV+ here or anywhere.</h1>
+      <p>
+        Find Apple TV+ on the Apple TV app, available on Apple devices, smart
+        TVs, and more.
+      </p>
+      <a href="https://support.apple.com/en-in/guide/tvplus/welcome/web"
+        ><p>See all supported devices </p></a
+      >
+      <div id="devices">
+        <div>
+          <img src="Image/appletv.jpeg" />
+          <h4>Apple TV</h4>
+        </div>
+        <div>
+          <a href=""><img src="Image/iphone.jpeg" /></a>
+          <h4>iPhone</h4>
+        </div>
+        <div>
+          <a href=""><img src="Image/ipad.jpeg" /></a>
+          <h4>iPad</h4>
+        </div>
+        <div>
+          <a href=""><img src="Image/Mac.jpeg" /></a>
+          <h4>Mac</h4>
+        </div>
+        <div>
+          <a href=""><img src="Image/Airplay.jpeg" /></a>
+          <h4>AirPlay</h4>
+        </div>
+      </div>
+      <h2>See it on your big screen</h2>
+      <a href=""><p>Set up your device </p></a>
+      <a href=""><p>Explore comatible devices </p></a>
+      <div id="devices1">
+        <div>
+          <a href=""><img src="Image/StreaminDevice.jpeg" /></a>
+          <h4>Streaming Devices</h4>
+          <p>Roku</p>
+          <p>Fire TV</p>
+          <p>Google TV</p>
+          <p>ANdroid TV</p>
+        </div>
+        <div>
+          <a href=""><img src="Image/mac.jpeg" /></a>
+          <h4>Smart TVs</h4>
+          <p>Samsung</p>
+          <p>LG</p>
+          <p>VIZIO</p>
+          <p>Sony</p>
+        </div>
+        <div>
+          <a href=""><img src="Image/game.jpeg" /></a>
+          <h4>Gaming Consoles</h4>
+          <p>PlaySation</p>
+          <p>Xbox</p>
+        </div>
+      </div>
+      <h5>Devices availability varies by country or region.</h5>
+    </div>
 
+    <section>
+      <h1 class="title">Questions ? Answers</h1>
+
+      <div class="faq">
+        <div class="question">
+          <h2>What is Apple TV+?</h2>
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path
+              d="M3 3L21 21L39 3"
+              stroke="white"
+              stroke-width="7"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Apple&nbsp;TV+ is a streaming service from Apple. It features
+            exclusive Apple&nbsp;Original shows and movies from some of the
+            industry's top talent, with new premieres arriving each month.
+            Browse all of the available content on Apple&nbsp;TV+ inside the
+            Apple&nbsp;TV app on the “Apple&nbsp;TV+” tab or here on
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h2>What does Apple TV+ include?</h2>
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path
+              d="M3 3L21 21L39 3"
+              stroke="white"
+              stroke-width="7"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Apple TV+ is a streaming service featuring Apple Originals —
+            award-winning series, compelling dramas, groundbreaking
+            documentaries, kids' entertainment, comedies and more — with new
+            Apple Originals added every month
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h2>Where can i watch Apple TV+ ?</h2>
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path
+              d="M3 3L21 21L39 3"
+              stroke="white"
+              stroke-width="7"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Search for “Apple TV.” app (whichever is available for your Smart
+            TV). On your Smart TV's home screen or app launcher, select the
+            Apple TV or Apple TV+ app to open it, then sign in with an Apple ID
+            if prompted. Note: If you don't already have an Apple ID, you can
+            create one on the Apple ID website.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h2>How to watch apple tv+ on android and windows ?</h2>
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path
+              d="M3 3L21 21L39 3"
+              stroke="white"
+              stroke-width="7"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Go to tv.apple.com to subscribe to and watch Apple TV+ in a web
+            browser. Note: If you already have an Apple ID, you can sign in to
+            start your free trial. You may be asked to add or verify a credit
+            card to ensure the account holder has authorized viewing on the web.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h2>what movies are on Apple Tv + ?</h2>
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path
+              d="M3 3L21 21L39 3"
+              stroke="white"
+              stroke-width="7"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Apple TV+ shows you can watch for free Apple allows you to watch the
+            first episode of many shows for free. In fact there are 38 free
+            episodes available to watch for free including the first episodes of
+            Ted Lasso, The Morning Show, See, Trying and more
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <h2>Can I get apple tv + for free ?</h2>
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path
+              d="M3 3L21 21L39 3"
+              stroke="white"
+              stroke-width="7"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            (1) If you buy an Apple device, Apple TV+ is included free for 3
+            months. (2) A monthly subscription is just ₹99 per month after a
+            free 7-day trial. (3) Apple TV+ is included in Apple One, which
+            bundles three other Apple services into a single monthly
+            subscription. Apple One plans start at ₹195 per month.
+          </p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="question">
+          <h2>How do I get apple tv + ?</h2>
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path
+              d="M3 3L21 21L39 3"
+              stroke="white"
+              stroke-width="7"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Go to your device's app store and search for the Apple TV app or
+            Apple TV+ app. If you don't see the app that you're looking for,
+            check your device's compatibility. ... Download the app. Open the
+            app and follow the instructions to complete setup.
+          </p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="question">
+          <h2>How do i cancel apple tv + ?</h2>
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path
+              d="M3 3L21 21L39 3"
+              stroke="white"
+              stroke-width="7"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Open iTunes on your PC. From the iTunes' menu bar at the top select
+            "Account" and then "View My Account." Click on "View Account."
+            Scroll to "Settings" and then next to "Subscriptions" click
+            "Manage." Select "Edit." Click "Cancel Subscription."
+          </p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="question">
+          <h2>How share apple tv + with family ?</h2>
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path
+              d="M3 3L21 21L39 3"
+              stroke="white"
+              stroke-width="7"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            <!-- Can I share my Apple TV membership? -->
+            Family Sharing lets you share viewing privileges with up to six
+            family members. One adult in your household—the family
+            organizer—invites family members to join the family group and agrees
+            to pay for any purchases made by family members.
+          </p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="question">
+          <h2>Is Apple tv +accessible ?</h2>
+          <svg width="15" height="10" viewbox="0 0 42 25">
+            <path
+              d="M3 3L21 21L39 3"
+              stroke="white"
+              stroke-width="7"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="answer">
+          <p>
+            Apple TV includes built-in accessibility features: VoiceOver: Apple
+            TV supports VoiceOver, Apple's screen reader. Available in all the
+            languages supported by Apple TV, and with support for Braille
+            displays, VoiceOver tells you exactly what's on your TV screen and
+            helps you choose commands.
+          </p>
+        </div>
+      </div>
+      <div class="global-footer_left">
+        <p>
+          Copyright © 2022
+          <a href="https://www.apple.com"> Apple Inc. </a>
+          All rights reserved.
+        </p>
+        <p>
+          <a href="#"> Internet Service Terms </a>
+          <a href="#"> Apple TV &amp; Privacy </a>
+          <a href="#"> Cookie Warning </a>
+          <a href="#"> Support </a>
+        </p>
+      </div>
+    </section>
+  </body>
 </html>
 
-
 <script type="module" src="./homepage.js"></script>
-<script  src="./sliderfunc.js"></script>
+<script src="./sliderfunc.js"></script>
+<script src="./scripts/main.js" type="module"></script>
+<script>
+  const faqs = document.querySelectorAll(".faq");
+  faqs.forEach((faq) => {
+    faq.addEventListener("click", () => {
+      faq.classList.toggle("active");
+    });
+  });
+</script>

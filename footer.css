@@ -1,14 +1,15 @@
 #footer1{
-    height: 800px;
-    border: 1px solid blue;
+    height: 750px;
+    margin-top: 40px;
+    border: 0px solid blue;
     text-align: center;
     background-color: black;
     color: white;
-    line-height: 10px;
+    line-height: 15px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #footer1 img{
-    margin-top: 19px;
+    margin-top: 40px;
     width: 5%;
     height: 65px;
 }
@@ -31,12 +32,12 @@
 }
 #devices{
     display: flex;
-    margin-left: 400px;
+    margin-left: 340px;
     gap: 70px;
 }
 #devices img{
-    width: auto;
-    height: 40px;
+    width: 80px;
+    height: 50px;
     background-color: white;
     margin-left: 20px;
     margin-top: 24px;
@@ -50,6 +51,7 @@
     margin-top: 10px;
 }
 #footer1 h2{
+    padding: 20px;
     font-size: 24px;
     font-weight: 600;
     text-decoration: none solid rgba(255,255,255);
@@ -66,8 +68,8 @@
     margin-top: 1px;
 }
 #devices1 img{
-    width: auto;
-    height: 40px;
+    width: 80px;
+    height: 50px;
     background-color: white;
     margin-left: 20px;
     margin-top: 24px;
@@ -83,19 +85,98 @@
     height: 5px;
 }
 #devices1 p{
-    margin-top: 0px;
+    margin-top: 17px;
     font-size: 15px;
     line-height: 22.05px;
     margin-left: 25px;
     height: 8px;
 }
 #footer1 h5{
-    font-size: 13px;
+    margin-top: 57px;
+    font-size: 15px;
     line-height: 13.09px;
     font-weight: 600;
-    margin-left: 40px;
+    text-align: center;
 }
 #footer1 a{
     color: rgb(24, 189, 255);
     text-decoration: no;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+/* 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+} */
+
+section{
+    min-width:100%;
+    width:80%;
+    margin: 0 0 40px 0 ;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: #323232;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title{
+    margin: 40px 0 40px 0 ;
+    font-size: 3rem;
+    margin:2 rem 0rem
+}
+.faq{
+   
+    width: 70%;
+    margin-top: 2px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+    cursor:pointer
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question h2{
+    font-size: 25px;
+    font-weight: 300;
+
+}
+
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.1s ease;
+}
+.answer p{
+ padding-top: 1rem;
+ line-height: 1.4;
+ font-size: 14px;
+}
+
+.faq.active .answer{
+    max-height: 300px;
+    
+}
+
+.faq.active svg{
+    transform: rotate(180deg);
+    
+}
+svg{
+    transition: transform 0.5s ease-in;
+}
+.global-footer_left{
+   right: 480px;
+   display: flex;
+   justify-content: space-between;
+   margin: auto;
+}
+.global-footer_left> p a{
+   margin-left: 16px;
+   color: rgb(31, 159, 210);
 }
