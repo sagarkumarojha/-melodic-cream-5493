@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+  
+    background-color: rgba(45, 42, 42, 0.114);
+    overflow-x: hidden;
+  }
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
+  
+  
+  
+ #movies, #movies2 {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+    margin-left: 2rem;
+  }
+
+ 
+  
+  
+  .mainDivs{
+  
+    position: relative;
+    margin: 10px;
+  }
+  
+ 
+ #cardContainer1,#cardContainer2 {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+  }
+  
+
+ /* #cardContainer1,#cardContainer2::-webkit-scrollbar {
+    height: 0;
+  } */
+  
+ 
+  #prev,
+  #next,#prev2,
+  #next2{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: rgba(219, 215, 215, 0.6);
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  #prev,#prev2{
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: none;
+  }
+
+  #next, #next2{
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+ 
+  
+
+  
+ 
+  .subDiv {
+  
+    border-radius: 25px 25px 20px 20px;
+
+  
+    height: auto;
+    padding: 5px;
+    position: relative;
+    width: auto;
+    float: left;
+ 
+  }
+  
+  
+ 
+  .subDiv>img {
+    border-radius: 20px;
+    width: 200px;
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+   
+  }
+  
+
+  .subDiv>img:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.01);
+    cursor: pointer;
+  }
+  
+
+  
+
+  
+
+  
+  
+  
+  @media (max-width: 980px) {
+  
+    .subDiv{
+      box-shadow: rgba(255, 255, 255, 0.35) 0px 2px 5px;
+      border-radius: 25px 25px 20px 20px;
+     
+      border: 0.002px solid white;
+      height: auto;
+      padding: 2px;
+      position: relative;
+      width: 200px;
+    
+      float: left;
+      margin-right: 10px;
+    }
+    .subDiv>img {
+      border-radius: 20px;
+      width: 100%;
+      height: 100px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+
+    }
+  
+ 
+
+  
+    
+  }
+  
+
+  
