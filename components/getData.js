@@ -12,8 +12,6 @@ async function getMovies  (url) {
   }
  async function appendMovies(data,data_div) {
     const IMG_URL = 'https://image.tmdb.org/t/p/w500';
-    
-
     data_div.innerHTML = null;
     data.forEach(function (ele) {
         
@@ -42,4 +40,39 @@ async function getMovies  (url) {
 
 }
 
-  export {getMovies,appendMovies} 
+async function appendMovies2(data,data_div) {
+    const IMG_URL = 'https://image.tmdb.org/t/p/w500';
+    data_div.innerHTML = null;
+    data.forEach(function (ele) {
+        
+        let div = document.createElement('div');
+        div.className = "subDiv"
+        div.addEventListener("click",function(){
+           
+            let movieDeta = {
+                name:`${ele.title}`,
+                image:`${ele.poster_path}`,
+                rating:`${ele.vote_average}`,
+                details:`${ele.overview}`,
+            }
+            
+            localStorage.setItem("movieDetails",JSON.stringify(movieDeta));
+            //window.location.href="detais.html"
+        })
+
+        let img = document.createElement('img');
+        img.src=IMG_URL+ele.poster_path;
+
+        let details = document.createElement('p');
+        details.innerText=ele.overview;
+        let name = document.createElement('p');
+        name.src=ele.title;
+
+        div.append(img,name,details);
+        data_div.append(div)
+
+    });
+
+}
+
+  export {getMovies,appendMovies,appendMovies2} 
