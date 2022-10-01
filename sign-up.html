@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up></title>
+    <script
+    src="https://kit.fontawesome.com/d591cda822.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="./styles/login-data.css">
+</head>
+<body>
+    <main>
+        <div class="container" id="form-container">
+            <div class="logo" id="floated-logo">
+                <i class="fa-brands fa-apple fa-2xl"></i>
+            </div>
+            <p class="main-heading">Create Apple ID</p>
+            <form id="myForm">
+                <input type="text" id="fname" placeholder="First Name" required />
+                <input type="text" id="lname" placeholder="Last Name" required />
+                <input
+                  type="text"
+                  id="bday"
+                  placeholder="Birthday"
+                  onfocus="(this.type='date')"
+                  onblur="(this.type='text')"
+                  required
+                />
+                <input
+                  type="email"
+                  name=""
+                  id="email"
+                  placeholder="name@example.com"
+                  required
+                />
+                <label for="email">Your email will be your Apple ID</label>
+                <input
+                  type="password"
+                  name="pass"
+                  id="pass"
+                  placeholder="Password"
+                  required
+                />
+                      <div id="checkbox-div">
+                    <input type="checkbox" name="agree" id="check" required />
+                    <p class="heading">Agree to Terms & Conditions</p>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Continue" id="submit-btn" />
+                  </div>
+
+            </form>
+            <!-- <div class="submit">
+                <button  value="Continue" id="submit-btn">Continue</button>
+            </div> -->
+
+            <div class="divider"></div>
+            <div class="conditions">
+              By continuing, you acknowledge that you agree to the
+              <a href="https://www.apple.com/legal/internet-services/itunes/"
+                >Apple Media Services Terms and Conditions</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+<script src="./scripts/signup.js"></script>
