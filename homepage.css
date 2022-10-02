@@ -17,7 +17,7 @@
   
   
   
- #movies, #movies2,#movies3,#movies4 {
+ #movies, #movies2,#movies3,#movies4,#movies5,#movies6, #movies7,#movies8,#movies9,#movies10{
     display: grid;
     grid-gap: 16px;
     grid-auto-flow: column;
@@ -33,8 +33,11 @@
   
     position: relative;
     margin: 10px;
+    box-shadow: rgba(253, 253, 253, 0.33) 0px 1px 0px;
+    margin-bottom: 20px;
   }
-  .mainDivs p{
+  .mainDivs >p{
+  margin: 1.5rem;
  font-size: 2rem;
  color: rgb(239, 239, 237);
 
@@ -42,10 +45,12 @@
   }
   
  
- #cardContainer1,#cardContainer2,#cardContainer3,#cardContainer4 {
+ #cardContainer1,#cardContainer2,#cardContainer3,#cardContainer4,#cardContainer5, #cardContainer6,#cardContainer7,#cardContainer8,#cardContainer9,#cardContainer10{
     overflow: auto;
     scroll-behavior: smooth;
     scrollbar-width: 0;
+    
+
   }
   
 
@@ -54,7 +59,13 @@
   #next,#prev2,
   #next2,#prev3,
   #next3,#prev4,
-  #next4{
+  #next4,#prev5,
+  #next5,#prev6,
+  #next6,#prev7,
+  #next7,#prev8,
+  #next8,#prev9,
+  #next9,#prev10,
+  #next10{
     display: flex;
     justify-content: center;
     align-content: center;
@@ -67,17 +78,18 @@
     position: absolute;
   }
   
-  #prev,#prev2,#prev3,#prev4{
+  #prev,#prev2,#prev3,#prev4,#prev5, #prev6,#prev7,#prev8,#prev9,#prev10{
     top: 50%;
     left: 0;
     transform: translate(50%, -50%);
-    display: none;
+    display: flex;
   }
 
-  #next, #next2,#next3, #next4{
+  #next, #next2,#next3, #next4,#next5,#next6, #next7,#next8, #next9,#next10{
     top: 50%;
     right: 0;
     transform: translate(-50%, -50%);
+    display: flex;
   }
   
  
@@ -86,51 +98,80 @@
   
  
   .subDiv {
-  
     border-radius: 25px 25px 20px 20px;
-
-  
     height: auto;
     padding: 5px;
     position: relative;
     width: auto;
     float: left;
- 
   }
   
-  
- 
   .subDiv>img {
     border-radius: 20px;
-    width: 300px;
-    height: 150px;
+    width: 270px;
+    height: 140px;
     overflow-x: hidden;
     overflow-y: hidden;
    
   }
-  
+  .subDiv>p{
+    margin: 10px;
+  display: inline;
+  font-size: 1.4rem;
+  color: rgb(239, 239, 237);
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
+  }
+  .rating{
+   float: right;
+   padding-right: 5px;
+
+
+  }
 
   .subDiv>img:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transform: scale(1.01);
+    /* transform: scale(1.01); */
     cursor: pointer;
   }
   
 
+  .BigsubDiv{
+    /* border-radius: 25px 25px 20px 20px; */
+    /* width: 100vw; */
+    height: auto;
+    /* padding: 5px; */
+    position: relative;
+    float: left;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+  .BigsubDiv>img {
+    margin: 0;
+    padding: 0;
+    height: 650px;
+    /* border-radius: 20px; */
+    width: 90vw;
+     overflow-x: hidden;
+    overflow-y: hidden;
+    float: left; 
+   
+  }
   
-
-  
-
+  .BigsubDiv>img:hover {
+    cursor: pointer;
+  }
   
   
   
   @media (max-width: 980px) {
   
     .subDiv{
-      box-shadow: rgba(255, 255, 255, 0.35) 0px 2px 5px;
       border-radius: 25px 25px 20px 20px;
-     
-      border: 0.002px solid white;
+  
       height: auto;
       padding: 2px;
       position: relative;
