@@ -32,6 +32,7 @@ async function getMovies  (url) {
 
         let img = document.createElement('img');
         img.src=IMG_URL+ele.poster_path;
+        img.style.height="300px";
 
         div.append(img,);
         data_div.append(div)
@@ -61,6 +62,7 @@ async function appendMovies3(data,data_div) {
 
         let img = document.createElement('img');
         img.src=IMG_URL+ele.poster_path;
+        img.style.height="1000px";
 
         div.append(img,);
         data_div.append(div)
@@ -92,6 +94,7 @@ async function appendMovies2(data,data_div) {
 
         let img = document.createElement('img');
         img.src=IMG_URL+ele.poster_path;
+        img.style.height="300px";
 
 
         let rating = document.createElement('p');
