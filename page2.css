@@ -1,34 +1,37 @@
 
 
 .banner>img{
-    /* height:600px; */
-    width:100%
+    height:760px;
+    width:100%;
 }
 
 .banner h1{
     position:absolute;
-    bottom: 80%;
+    bottom: 78%;
+    font-weight: 900;
     color:white;
     margin-left: 50px;
-    
+    font-size: 60px;
 }
 .banner h2{
     position:absolute;
-    bottom: 75%;
+    bottom: 67%;
+    font-weight: 900;
     color:white;
-    margin-left: 50px;
+    font-size: 60px;
+    margin-left: 60px;
     
 }
 .banner h5{
     position:absolute;
-    top: 60%;
+    top: 64%;
     color:white;
     margin-left: 50px;
-    
+    font-size: 30px;    
 }
 #btn{
     position: absolute;
-    top:70%;
+    top:78%;
     margin-left: 45px;
     /* width:200px; */
    /* border:1px solid red; */
@@ -41,6 +44,7 @@
     height: 50px;
     border-radius: 10px;
     font-size:20px;
+    font-weight: 700;
 
 }
 
@@ -51,6 +55,7 @@
     margin-left: 45px;
     margin-top:150px;
     /* border:1px solid red */
+    
    
 
 }
@@ -59,20 +64,25 @@
     height: 50px;
     border-radius: 10px;
     font-size:20px;
+    font-weight: 700;
 
 }
 #title{
     position: absolute;
-    top:85%;
+    top:68%;
     color:white;
-    margin-left: 400px;
+    margin-left: 320px;
+    font-size: 29px;
+    font-weight: 900;
 }
 
 #title2{
     position: absolute;
-    top:90%;
+    top:700px;
     color:white;
-    margin-left: 400px;
+    margin-left: 320px;
+    font-size: 28px;
+    font-weight: 900;
 }
 #middle{
     /* width:100%; */
@@ -84,7 +94,7 @@
 
 #middle>img{
     border-radius: 20px;
-    width:20%
+    width:20%;
 }
 #middle>div{
     width:20%;
