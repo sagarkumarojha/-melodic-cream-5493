@@ -1,6 +1,7 @@
 
 
 .banner>img{
+    /* height:600px; */
     width:100%
 }
 
@@ -20,14 +21,14 @@
 }
 .banner h5{
     position:absolute;
-    top: 88%;
+    top: 60%;
     color:white;
     margin-left: 50px;
     
 }
 #btn{
     position: absolute;
-    top:95%;
+    top:70%;
     margin-left: 45px;
     /* width:200px; */
    /* border:1px solid red; */
@@ -46,7 +47,7 @@
 
 #btn2{
     position: absolute;
-    top:80%;
+    top:67%;
     margin-left: 45px;
     margin-top:150px;
     /* border:1px solid red */
@@ -62,16 +63,16 @@
 }
 #title{
     position: absolute;
-    top:95%;
+    top:85%;
     color:white;
-    margin-left: 300px;
+    margin-left: 400px;
 }
 
 #title2{
     position: absolute;
-    top:100%;
+    top:90%;
     color:white;
-    margin-left: 300px;
+    margin-left: 400px;
 }
 #middle{
     /* width:100%; */
@@ -106,11 +107,7 @@
     /* border:1px solid red; */
     margin: auto;
 }
-#bottom>div div{
-    /* border:1px solid red; */
-    /* margin-bottom: 10px; */
-    
-}
+
 #small{
     width:10%;
     height: 20px;

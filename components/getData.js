@@ -21,13 +21,42 @@ async function getMovies  (url) {
            
             let movieDeta = {
                 name:`${ele.title}`,
-                image:`${ele.poster_path}`,
+                image:`${IMG_URL}${ele.poster_path}`,
                 rating:`${ele.vote_average}`,
                 details:`${ele.overview}`,
             }
             
             localStorage.setItem("movieDetails",JSON.stringify(movieDeta));
-            //window.location.href="detais.html"
+            window.location.href="page2.html"
+        })
+
+        let img = document.createElement('img');
+        img.src=IMG_URL+ele.poster_path;
+
+        div.append(img,);
+        data_div.append(div)
+
+    });
+
+}
+async function appendMovies3(data,data_div) {
+    const IMG_URL = 'https://image.tmdb.org/t/p/w500';
+    data_div.innerHTML = null;
+    data.forEach(function (ele) {
+        
+        let div = document.createElement('div');
+        div.className = "BigsubDiv"
+        div.addEventListener("click",function(){
+           
+            let movieDeta = {
+                name:`${ele.title}`,
+                image:`${IMG_URL}${ele.poster_path}`,
+                rating:`${ele.vote_average}`,
+                details:`${ele.overview}`,
+            }
+            
+            localStorage.setItem("movieDetails",JSON.stringify(movieDeta));
+            window.location.href="page2.html"
         })
 
         let img = document.createElement('img');
@@ -51,28 +80,31 @@ async function appendMovies2(data,data_div) {
            
             let movieDeta = {
                 name:`${ele.title}`,
-                image:`${ele.poster_path}`,
+                image:`${IMG_URL}${ele.poster_path}`,
                 rating:`${ele.vote_average}`,
                 details:`${ele.overview}`,
             }
+            console.log(movieDeta.image)
             
             localStorage.setItem("movieDetails",JSON.stringify(movieDeta));
-            //window.location.href="detais.html"
+            window.location.href="page2.html"
         })
 
         let img = document.createElement('img');
         img.src=IMG_URL+ele.poster_path;
 
-        let details = document.createElement('p');
-        details.innerText=ele.overview;
+
+        let rating = document.createElement('p');
+        rating.innerText=ele.vote_average;
+        rating.className = "rating"
         let name = document.createElement('p');
         name.innerText=ele.title;
 
-        div.append(img,name,details);
+        div.append(img,name,rating);
         data_div.append(div)
 
     });
 
 }
 
-  export {getMovies,appendMovies,appendMovies2} 
+  export {getMovies,appendMovies,appendMovies2,appendMovies3} 
